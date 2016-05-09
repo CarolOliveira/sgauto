@@ -22,24 +22,24 @@ function listarAlunos($conexao){
 	return $alunos;
 }
 
-function buscaAluno($conexao, $id){
-	$query = "select * from aluno where cpf_aluno = {$id}";
+function buscaInstrutor($conexao, $id){
+	$query = "select * from aluno where cpf_instrutor = {$id}";
 	$resultado = mysqli_query($conexao, $query);
 	return mysqli_fetch_assoc($resultado);
 }
 
-function alterarAluno($conexao, $nome, $cpf, $rg, $data, $endereco, 
+function alterarInstrutor($conexao, $nome, $cpf, $rg, $data, $endereco, 
         $cidade, $estado, $tel, $cel, $email){
-        $query = "update aluno set nm_aluno='{$nome}',"
-        . "dt_nascimento_aluno='{$data}',cd_registro_geral_aluno='{$rg}',"
-        . "nm_endereco_aluno='{$endereco}',nm_cidade_aluno='{$cidade}',"
-        . "sg_estado_aluno='{$estado}',cd_telefone_um_aluno='{$tel}',"
-        . "cd_celular_aluno='{$cel}',nm_email_aluno='{$email}' "
-        . "where cpf_aluno = '{$cpf}'";
+        $query = "update instrutor set nm_instrutor='{$nome}',"
+        . "dt_nascimento_instrutor='{$data}',cd_registro_geral_instrutor='{$rg}',"
+        . "nm_endereco_instrutor='{$endereco}',nm_cidade_instrutor='{$cidade}',"
+        . "sg_estado_instrutor='{$estado}',cd_telefone_um_instrutor='{$tel}',"
+        . "cd_celular_instrutor='{$cel}',nm_email_instrutor='{$email}' "
+        . "where cpf_instrutor = '{$cpf}'";
 	return mysqli_query($conexao, $query);
 }
 
-function removeAluno($conexao, $id){
-	$query = "delete from cliente where cpf_aluno = {$id}";
+function removeInstrutor($conexao, $id){
+	$query = "delete from instrutor where cpf_instrutor = {$id}";
 	return mysqli_query($conexao,$query);
 }
