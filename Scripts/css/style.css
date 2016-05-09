@@ -14,10 +14,10 @@ body.login{
     background-color: rgba(255,255,255,.8);
 }
 
-fieldset#acesso{
-    background: url("../../Resources/ImagesPNG/funcionarios.png") no-repeat 55% 95%;
-    background-size: 300px;
-}
+//fieldset#acesso{
+  //  background: url("../../Resources/ImagesJPG/logo.jpg") no-repeat 55% 95%;
+    //background-size: 900px;
+//}
 
 #form-venda{
     width: 500px;

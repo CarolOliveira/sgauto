@@ -17,11 +17,11 @@ $busca = buscaCliente($conexao, $id)
             <tr><td>Nome do Aluno</td><td><input type="text" class="form-control" name="nome_aluno" size="60" value="<?=$busca['nm_aluno']?>" required></td></tr>
             <tr><td>CPF do Aluno</td><td><input type="number" class="form-control" name="cpf_aluno" size="60" value="<?=$busca['cpf_aluno']?>" required></td></tr>
             <tr><td>RG do Aluno</td><td><input type="number" class="form-control" name="rg_aluno" min="1" size="20" value="<?=$busca['cd_registro_geral_aluno']?>" required></td></tr>
-            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_cliente" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_cliente']?>" required></td></tr>
-            <tr><td>Endereço do Cliente</td><td><input type="text" class="form-control" name="endereco_cliente" size="60" value="<?=$busca['nm_endereco_cliente']?>" required></td></tr>
-            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_cliente" size="60" value="<?=$busca['nm_cidade_cliente']?>" required></td></tr>
+            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_aluno" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_cliente']?>" required></td></tr>
+            <tr><td>Endereço do Aluno</td><td><input type="text" class="form-control" name="endereco_aluno" size="60" value="<?=$busca['nm_endereco_aluno']?>" required></td></tr>
+            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_aluno" size="60" value="<?=$busca['nm_cidade_aluno']?>" required></td></tr>
             <tr><td>Estado</td><td>
-                    <select name="estado_cliente" class="form-control">
+                    <select name="estado_aluno" class="form-control">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -52,13 +52,13 @@ $busca = buscaCliente($conexao, $id)
                         
                     </select>    
                 </td></tr>
-            <tr><td>Telefone Fixo</td><td><input type="number" class="form-control" name="tel_cliente" size="60" value="<?=$busca['cd_telefone_um_cliente']?>" required></td></tr>
-            <tr><td>Telefone Celular</td><td><input type="number" class="form-control" name="cel_cliente" size="60" value="<?=$busca['cd_telefone_dois_cliente']?>" required></td></tr>
-            <tr><td>E-Mail do Cliente</td><td><input type="email" class="form-control" name="email_cliente" size="60" value="<?=$busca['nm_email_cliente']?>" required></td></tr>
+            <tr><td>Telefone Fixo</td><td><input type="number" class="form-control" name="tel_aluno" size="60" value="<?=$busca['cd_telefone_um_aluno']?>" required></td></tr>
+            <tr><td>Telefone Celular</td><td><input type="number" class="form-control" name="cel_aluno" size="60" value="<?=$busca['cd_telefone_dois_aluno']?>" required></td></tr>
+            <tr><td>E-Mail do Aluno</td><td><input type="email" class="form-control" name="email_aluno" size="60" value="<?=$busca['nm_email_aluno']?>" required></td></tr>
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>
-    <a href="../Views/listar_cliente.php">Voltar</a>
+    <a href="../Views/listar_aluno.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';
