@@ -40,6 +40,6 @@ function alterarAluno($conexao, $nome, $cpf, $rg, $data, $endereco,
 }
 
 function removeAluno($conexao, $id){
-	$query = "delete from cliente where cpf_aluno = {$id}";
+	$query = "delete from aluno where cpf_aluno = {$id}";
 	return mysqli_query($conexao,$query);
 }
