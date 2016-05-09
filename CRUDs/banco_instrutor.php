@@ -1,7 +1,7 @@
 <?php
-function insereAluno($conexao, $nome, $cpf, $rg, 
+function insereInstrutor($conexao, $nome, $cpf, $rg, 
         $nacto, $endereco, $cidade, $estado, $tel, $cel, $email){
-    $query = "insert into aluno (cpf_aluno, nm_aluno, dt_nascimento_aluno, "
+    $query = "insert into instrutor (cpf_instrutor, nm_instrutor, dt_nascimento_aluno, "
             . "cd_registro_geral_aluno, nm_endereco_aluno, "
             . "nm_cidade_aluno, sg_estado_aluno, "
             . "cd_telefone_um_aluno, "
