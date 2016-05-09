@@ -21,8 +21,8 @@ $busca = buscaUsuarioSistema($conexao, $id)
                     <select name="nv_acesso" class="form-control">
                         <option value="1">Administrativo</option>
                         <option value="2">Gerencial</option>
-                        <option value="3" selected="">Atendimento</option>
-                        <option value="4">Auxiliar</option>
+                        <option value="3" selected="">Instrutor</option>
+                        <option value="4">Aluno</option>
                     </select>
                 </td></tr>
         </table>
