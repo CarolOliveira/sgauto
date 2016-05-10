@@ -28,7 +28,7 @@ function MascaraCPF(cpf){
 function ValidarCPF(Objcpf){
 	var cpf = Objcpf.value;
 	exp = /\.|\-/g;
-	cpf = cpf.toString().replace( exp, "" ); 
+        cpf = cpf.toString().replace( exp, "" ); 
 	var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
 	var soma1=0, soma2=0;
 	var vlr =11;
@@ -49,7 +49,7 @@ function ValidarCPF(Objcpf){
 
 <center>
     <h2>Cadastro de Alunos</h2>
-    <form action="../Models/enviar_cliente.php" method="post">
+    <form action="../Models/enviar_aluno.php" method="post">
         <table border="0" class="table">
             <tr><td>Nome do Aluno</td><td><input type="text" class="form-control" name="nome_aluno" size="60" required></td></tr>
             <tr><td>CPF do Aluno</td><td><input type="number" min="1111111111" max="99999999999" onblur="ValidarCPF(form1.cpf_usuario)" OnKeyPress="MascaraCPF(form1.cpf_usuario);" class="form-control" name="cpf_aluno" size="60" required></td></tr>
@@ -91,7 +91,7 @@ function ValidarCPF(Objcpf){
                 </td></tr>
             <tr><td>Telefone Fixo</td><td><input type="number" min="0000000000" max="9999999999" class="form-control" name="tel_aluno" size="60" required></td></tr>
             <tr><td>Telefone Celular</td><td><input type="number" min="00000000000" max="99999999999" class="form-control" name="cel_aluno" size="60"></td></tr>
-            <tr><td>E-Mail do Cliente</td><td><input type="email" class="form-control" name="email_aluno" size="60"></td></tr>
+            <tr><td>E-Mail do Aluno</td><td><input type="email" class="form-control" name="email_aluno" size="60"></td></tr>
         </table>
         <button class="btn btn-success" type="submit">Cadastrar</button>     
     </form>
