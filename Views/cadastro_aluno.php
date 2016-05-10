@@ -50,7 +50,7 @@ function ValidarCPF(Objcpf){
 <center>
     <h2>Cadastro de Alunos</h2>
     <form action="../Models/enviar_aluno.php" method="post">
-        <table border="0" class="table">
+        <table border="200" class="table">
             <tr><td>Nome do Aluno</td><td><input type="text" class="form-control" name="nome_aluno" size="60" required></td></tr>
             <tr><td>CPF do Aluno</td><td><input type="number" min="1111111111" max="99999999999" onblur="ValidarCPF(form1.cpf_usuario)" OnKeyPress="MascaraCPF(form1.cpf_usuario);" class="form-control" name="cpf_aluno" size="60" required></td></tr>
             <tr><td>RG do Aluno</td><td><input type="number" class="form-control" name="rg_aluno" min="1111111" max="999999999" size="20" required></td></tr>
