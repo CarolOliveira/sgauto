@@ -1,27 +1,27 @@
 <?php
 include '../Includes/conecta.php';
 include '../Includes/cabecalho.php';
-include '../CRUDs/banco_instrutor.php';
+include '../CRUDs/banco_aluno.php';
 include 'logica_usuario.php';
 verificaUsuario();
 $id = $_GET['id'];
-$busca = buscaInstrutor($conexao, $id)
+$busca = buscaAluno($conexao, $id)
 
 ?>
 
 <center>
-    <h2>Atualização de Dados de Instrutores</h2>
-    <form action="../Models/atualizar_instrutor.php" method="post">
-        <input type="hidden" name="id" value="<?=$busca['id_instrutor']?>">
+    <h2>Atualização de Dados de Alunos</h2>
+    <form action="../Models/atualizar_aluno.php" method="post">
+        <input type="hidden" name="id" value="<?=$busca['id_aluno']?>">
         <table border="0" class="table">
-            <tr><td>Nome do instrutor</td><td><input type="text" class="form-control" name="nome_instrutor" size="60" value="<?=$busca['nm_instrutor']?>" required></td></tr>
-            <tr><td>CPF do instrutor</td><td><input type="number" class="form-control" name="cpf_instrutor" size="60" value="<?=$busca['cpf_instrutor']?>" required></td></tr>
-            <tr><td>RG do instrutor</td><td><input type="number" class="form-control" name="rg_instrutor" min="1" size="20" value="<?=$busca['cd_registro_geral_instrutor']?>" required></td></tr>
-            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_instrutor" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_instrutor']?>" required></td></tr>
-            <tr><td>Endereço do instrutor</td><td><input type="text" class="form-control" name="endereco_instrutor" size="60" value="<?=$busca['nm_endereco_instrutor']?>" required></td></tr>
-            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_instrutor" size="60" value="<?=$busca['nm_cidade_instrutor']?>" required></td></tr>
+            <tr><td>Nome do Aluno</td><td><input type="text" class="form-control" name="nome_aluno" size="60" value="<?=$busca['nm_aluno']?>" required></td></tr>
+            <tr><td>CPF do Aluno</td><td><input type="number" class="form-control" name="cpf_aluno" size="60" value="<?=$busca['cpf_aluno']?>" required></td></tr>
+            <tr><td>RG do Aluno</td><td><input type="number" class="form-control" name="rg_aluno" min="1" size="20" value="<?=$busca['cd_registro_geral_aluno']?>" required></td></tr>
+            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_aluno" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_aluno']?>" required></td></tr>
+            <tr><td>Endereço do Aluno</td><td><input type="text" class="form-control" name="endereco_aluno" size="60" value="<?=$busca['nm_endereco_aluno']?>" required></td></tr>
+            <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_aluno" size="60" value="<?=$busca['nm_cidade_aluno']?>" required></td></tr>
             <tr><td>Estado</td><td>
-                    <select name="estado_instrutor" class="form-control">
+                    <select name="estado_aluno" class="form-control">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -52,13 +52,13 @@ $busca = buscaInstrutor($conexao, $id)
                         
                     </select>    
                 </td></tr>
-            <tr><td>Telefone Fixo</td><td><input type="number" class="form-control" name="tel_instrutor" size="60" value="<?=$busca['cd_telefone_um_instrutor']?>" required></td></tr>
-            <tr><td>Telefone Celular</td><td><input type="number" class="form-control" name="cel_instrutor" size="60" value="<?=$busca['cd_telefone_dois_instrutor']?>" required></td></tr>
-            <tr><td>E-Mail do instrutor</td><td><input type="email" class="form-control" name="email_instrutor" size="60" value="<?=$busca['nm_email_instrutor']?>" required></td></tr>
+            <tr><td>Telefone Fixo</td><td><input type="number" class="form-control" name="tel_aluno" size="60" value="<?=$busca['cd_telefone_um_aluno']?>" required></td></tr>
+            <tr><td>Telefone Celular</td><td><input type="number" class="form-control" name="cel_aluno" size="60" value="<?=$busca['cd_telefone_dois_aluno']?>" required></td></tr>
+            <tr><td>E-Mail do Aluno</td><td><input type="email" class="form-control" name="email_aluno" size="60" value="<?=$busca['nm_email_aluno']?>" required></td></tr>
         </table>
         <button class="btn btn-success" type="submit">Atualizar</button>     
     </form>
-    <a href="../Views/listar_instrutor.php">Voltar</a>
+    <a href="../Views/listar_aluno.php">Voltar</a>
 </center>
 <?php
 include '../Includes/rodape.php';
