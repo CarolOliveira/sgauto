@@ -26,9 +26,9 @@ if(isset($_SESSION["success"])){?>
 	<td><?=$lista['nm_aluno']?></td>
 	<td><?=$lista['cpf_aluno']?></td>
 	<td><?=$lista['cd_registro_geral_aluno']?></td>
-	<td><?=$lista['nm_endereco_aluno']?>, <?=$lista['nm_cidade_aluno']?>\<?=$lista['sg_estado_cliente']?></td>
+	<td><?=$lista['nm_endereco_aluno']?>, <?=$lista['nm_cidade_aluno']?>\<?=$lista['sg_estado_aluno']?></td>
 	<td><?=$lista['cd_telefone_um_aluno']?> \ <?=$lista['cd_telefone_dois_aluno']?></td>
-        <td><?=$lista['nm_email_cliente']?></td>
+        <td><?=$lista['nm_email_aluno']?></td>
         <td><a href="../Controllers/atualizar_aluno_bd.php?id=<?=$lista['cpf_aluno']?>"><button class="btn btn-info">Atualizar</button></a></td>
         <td><a href="../Models/deletar_aluno_bd.php?id=<?=$lista['cpf_aluno']?>"><button class="btn btn-danger">Deletar</button></a></td>
 	</tr>
