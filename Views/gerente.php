@@ -10,8 +10,8 @@ usuarioEstaLogado();
 
 <p class="text-success">Você está logado como <u><?=$_SESSION['UsuarioNome']?></u></p><br><br>
 
-    <a href="listar_cliente.php"><button class="btn btn-primary" title="CRUD Aluno">Cliente</button></a> 
-    <a href="listar_instrutor.php"><button class="btn btn-primary" title="CRUD Instrutor">Cliente</button></a> 
+    <a href="listar_aluno.php"><button class="btn btn-primary" title="CRUD Aluno">Aluno</button></a> 
+    <a href="listar_instrutor.php"><button class="btn btn-primary" title="CRUD Instrutor">Instrutor</button></a> 
     <a href="listar_veiculo.php"><button class="btn btn-primary" title="CRUD Veículo">Veículo</button></a> 
         <!--<li><a href="listar_item.php">Item</a><br></li>
     <li><a href="#">Manutenção</a></li>-->
