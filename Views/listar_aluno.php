@@ -1,7 +1,7 @@
 <?php
 include '../Includes/conecta.php';
 include '../Includes/cabecalho.php';
-include '../CRUDs/banco_cliente.php';
+include '../CRUDs/banco_aluno.php';
 include '../Controllers/logica_usuario.php';
 verificaUsuario();
 ?>
