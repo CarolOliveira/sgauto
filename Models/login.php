@@ -7,18 +7,17 @@ include '../Controllers/logica_usuario.php';
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 
-// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
+ //Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) AND (empty($_POST['login']) OR empty($_POST['senha']))) {
-	$_SESSION["danger"] = "Login e/ou Senha vazio(s)";
-	header("Location: ../index.php"); exit;
+$_SESSION["danger"] = "Login e/ou Senha vazio(s)";
+header("Location: ../index.php"); exit;
 }
 
-// Validação do usuário/senha digitados
-$codificado = sha1($senha);
-$usuario = buscaUsuario($conexao, $login, $codificado);
+ //Validação do usuário/senha digitados
+$usuario = buscaUsuario($conexao, $login, $senha);
         
 
-if (nroUsuario($conexao, $login, $codificado) != 1) {
+if (nroUsuario($conexao, $login, $senha) != 1) {
 	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
 	$_SESSION["danger"] = "Login Invalido";
 	header("Location: ../index.php");
