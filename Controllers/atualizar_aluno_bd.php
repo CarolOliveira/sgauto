@@ -5,7 +5,7 @@ include '../CRUDs/banco_aluno.php';
 include 'logica_usuario.php';
 verificaUsuario();
 $id = $_GET['id'];
-$busca = buscaCliente($conexao, $id)
+$busca = buscaAluno($conexao, $id)
 
 ?>
 
@@ -17,7 +17,7 @@ $busca = buscaCliente($conexao, $id)
             <tr><td>Nome do Aluno</td><td><input type="text" class="form-control" name="nome_aluno" size="60" value="<?=$busca['nm_aluno']?>" required></td></tr>
             <tr><td>CPF do Aluno</td><td><input type="number" class="form-control" name="cpf_aluno" size="60" value="<?=$busca['cpf_aluno']?>" required></td></tr>
             <tr><td>RG do Aluno</td><td><input type="number" class="form-control" name="rg_aluno" min="1" size="20" value="<?=$busca['cd_registro_geral_aluno']?>" required></td></tr>
-            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_aluno" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_cliente']?>" required></td></tr>
+            <tr><td>Data de Nascimento</td><td><input type="date" class="form-control" name="aniversario_aluno" placeholder="DD/MM/AAAA" size="20" value="<?=$busca['dt_nascimento_aluno']?>" required></td></tr>
             <tr><td>Endereço do Aluno</td><td><input type="text" class="form-control" name="endereco_aluno" size="60" value="<?=$busca['nm_endereco_aluno']?>" required></td></tr>
             <tr><td>Cidade</td><td><input type="text" class="form-control" name="cidade_aluno" size="60" value="<?=$busca['nm_cidade_aluno']?>" required></td></tr>
             <tr><td>Estado</td><td>
