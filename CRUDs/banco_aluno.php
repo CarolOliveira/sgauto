@@ -5,8 +5,8 @@ function insereAluno($conexao, $nome, $cpf, $rg,
             . "cd_registro_geral_aluno, nm_endereco_aluno, "
             . "nm_cidade_aluno, sg_estado_aluno, "
             . "cd_telefone_um_aluno, "
-            . "cd_celular_aluno,"
-            . "nm_email_cliente) VALUES('{$cpf}','{$nome}',"
+            . "cd_telefone_dois_aluno,"
+            . "nm_email_aluno) VALUES('{$cpf}','{$nome}',"
             . "'{$nacto}','{$rg}','{$endereco}','{$cidade}',"
             . "'{$estado}','{$tel}','{$cel}','{$email}')";
     return mysqli_query($conexao,$query);
@@ -34,7 +34,7 @@ function alterarAluno($conexao, $nome, $cpf, $rg, $data, $endereco,
         . "dt_nascimento_aluno='{$data}',cd_registro_geral_aluno='{$rg}',"
         . "nm_endereco_aluno='{$endereco}',nm_cidade_aluno='{$cidade}',"
         . "sg_estado_aluno='{$estado}',cd_telefone_um_aluno='{$tel}',"
-        . "cd_celular_aluno='{$cel}',nm_email_aluno='{$email}' "
+        . "cd_telefone_dois_aluno='{$cel}',nm_email_aluno='{$email}' "
         . "where cpf_aluno = '{$cpf}'";
 	return mysqli_query($conexao, $query);
 }
