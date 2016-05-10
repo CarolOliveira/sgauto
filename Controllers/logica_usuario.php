@@ -26,6 +26,9 @@ if (!isset($_SESSION["UsuarioID"]) or $_SESSION["UsuarioTipo"] <= 0){
 	$_SESSION["danger"] = "Somente ADM pode ter acesso a página";
 	// Redireciona o visitante de volta pro login
 	header("Location: ../index.php"); exit;
+        }else if($_SESSION['UsuarioTipo'] == 1){
+            header("Location: acesso.php");
+	//Redireciona para nivel de gerente
 }else if($_SESSION['UsuarioTipo'] == 2){
 	//Redireciona para nivel de gerente
 	header("Location: gerente.php");
