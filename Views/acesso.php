@@ -17,7 +17,7 @@ if (!isset($_SESSION["UsuarioID"]) or $_SESSION["UsuarioTipo"] <= 0){
 	header("Location: ../index.php"); exit;
         }else if($_SESSION['UsuarioTipo'] == 1){
 	//Redireciona para nivel de gerente
-	header("Location: listar_usuario.php");
+	header("Location: usuario.php");
 }else if($_SESSION['UsuarioTipo'] == 2){
 	//Redireciona para nivel de gerente
 	header("Location: gerente.php");

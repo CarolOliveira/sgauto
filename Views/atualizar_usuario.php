@@ -25,9 +25,9 @@ verificaUsuario();
             }elseif($lista['cd_tipo_usuario'] == 2){
 		echo("Gerencial");
             }elseif($lista['cd_tipo_usuario'] == 3){
-		echo("Atendimento");
+		echo("Instrutor ");
             }elseif($lista['cd_tipo_usuario'] == 4){
-                echo("Auxiliar");
+                echo("Aluno");
             }
 	?>
         </td>

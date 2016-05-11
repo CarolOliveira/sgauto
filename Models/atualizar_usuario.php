@@ -10,9 +10,9 @@ $cpf = $_POST["cpf_usuario"];
 $senha = $_POST["senha_usuario"];
 $nivel = $_POST["nv_acesso"];
 
-$codificado = sha1($senha);
+//$codificado = sha1($senha);
 
-if(alterarUsuario($conexao,$id,$nome,$cpf,$codificado, $nivel)){
+if(alterarUsuario($conexao,$id,$nome,$cpf,$senha,$nivel)){
         $_SESSION["success"] = "Atualizado com sucesso";
 	header('Location: ../Views/listar_usuario.php');
 	die();
